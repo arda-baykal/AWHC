@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+// Impact Dashboard - A Way Home Canada
+// React is loaded via CDN
+const { useState } = React;
 
 const ImpactDashboard = () => {
   const [activeView, setActiveView] = useState('theory');
@@ -1494,5 +1496,3 @@ const ImpactDashboard = () => {
     </div>
   );
 };
-
-export default ImpactDashboard;
