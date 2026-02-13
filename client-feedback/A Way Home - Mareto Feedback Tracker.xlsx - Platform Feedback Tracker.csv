@@ -1,0 +1,75 @@
+Category,Feedback Type,Specific Request,Status,Priority,Notes
+GENERAL,Enhancement,Alphabetize options in each category dropdown,Open,,Applies to all categories
+GEOGRAPHY,Add Option,Suburban,Open,,
+GEOGRAPHY,Add Option,Western Canada,Open,,
+GEOGRAPHY,Add Option,Atlantic Canada,Open,,
+GEOGRAPHY,Add Option,The North,Open,,
+GEOGRAPHY,Add Option,USA,Open,,May need narrower breakdown
+GEOGRAPHY,Add Option,International,Open,,Consider breakdown by country/continent
+PERSON TYPE,Reword,AWHC Director - misleading (sounds like Board Member),Open,,Flag for reword
+PERSON TYPE,Add Option,Board member,Open,,
+PERSON TYPE,Add Option,Volunteer,Open,,
+PERSON TYPE,Add Option,Elected official,Open,,
+PERSON TYPE,Add Option,Consultant,Open,,
+PERSON TYPE,Add Option,Elder,Open,,
+PROGRAM TYPE,Clarification,HUD under Demonstration project - intentional? (HUD is USA org),Open,,Needs confirmation
+ACTIVITY TYPE,Add Category,COH relationship,Open,,
+ACTIVITY TYPE,Add Option,Event Planning,Open,,
+ACTIVITY TYPE,Add Option,Board of Directors Management,Open,,"Includes meeting planning, travel coordination, minute taking"
+ACTIVITY TYPE,Add Option,Compliance,Open,,Annual government form submissions
+ACTIVITY TYPE,Add Option,Charity Status Management,Open,,Separate from general Admin if possible
+ACTIVITY TYPE,Add Option,Governance,Open,,Separate from general Admin if possible
+ACTIVITY TYPE,Add Option,Accounting,Open,,"Expense claims, budget management"
+PERSON-EVENT,Add Option,Keynote (separate from Presenter),Open,,
+PERSON-EVENT,Add Option,Panel,Open,,
+PERSON-EVENT,Add Option,Volunteer,Open,,
+PERSON-EVENT,Add Option,Elder,Open,,
+PERSON-EVENT,Add Option,Lived Experience Committee,Open,,Consider this addition
+EVENT STATUS TYPE,Add Option,Postponed,Open,,Different from Rescheduled (sometimes still pending)
+EVENT TYPE,Add Option,Board Meeting,Open,,
+EVENT TYPE,Add Option,Board Retreat,Open,,Annual in-person
+EVENT TYPE,Enhancement,Conferences - add International flag,Open,,
+ORGANIZATION TYPE,Enhancement,Add Canadian vs International designation,Open,,
+PERSON CASE TYPE,Add Option,Elders,Open,,
+PERSON CASE TYPE,Add Option,Volunteers,Open,,
+PERSON CASE TYPE,Add Option,Lived Expert,Open,,Consider this term
+ROLE TYPE,Add Option,Elder,Open,,
+TASK TYPE,Enhancement,Clarify where relationship-building activities land,Open,,"Quick calls, texts, coffee dates, lunch meetings"
+ACTIVITY TYPE,Enhancement,Prep and Meetings - specify whether with civil servants or politicians (Lobbying Act compliance tracking),Open,,Requirements have been tightened; need strong accounting of time spent
+DASHBOARD,Clarification,Define what qualifies as a Case versus a Program,Open,,Team may need a glossary of terms to ensure information tracked in right places
+GENERAL,Enhancement,"Create a glossary of terms for Mareto (Case, Program, etc.)",Open,,Ensure team tracks information in the right places consistently
+DASHBOARD,Clarification,Clarify to what extent the Theory of Change underpins the Mareto installation - is it based on AWH's actual full Theory of Change?,Open,,Raised for discussion in upcoming meeting
+GENERAL,Enhancement,Discuss phased approach to what is tracked and why,Open,,Raised by Katie; to be discussed in upcoming meeting
+ACTIVITY TYPE,Add Category,Policy and Government Relations,Open,,Need to track policy and government relations activities distinctly
+PROGRAM TYPE,Add Option,Making the Shift Prevention Awards Program,Open,,Track applications; create automatic surveys for recipients to collect impact data
+DASHBOARD,Clarification,"Clarify distinction between Cases, Projects, and Programs",Open,,Builds on earlier Case vs Program discussion; wants to hear explanation again
+DASHBOARD,Enhancement,Track number of current fee-for-service contracts,Open,,Dollar amounts will come from QuickBooks
+DASHBOARD,Enhancement,"Track trainings: count, type, attendees, completed vs. scheduled",Open,,
+DASHBOARD,Enhancement,"Track fidelity reviews: count, completed vs. scheduled",Open,,
+DASHBOARD,Enhancement,"Track Community of Practice sessions: count per CoP, attendance rate",Open,,
+DASHBOARD,Enhancement,Track satisfaction rates by site and by model,Open,,
+DASHBOARD,Enhancement,Track organizational retention rate or repeat service rate,Open,,Aspirational; wants to get to this eventually
+DASHBOARD,Enhancement,"Track grant-specific deliverables (e.g., ESDC: # young people and FNS reached; INFC: # of CEs contacted)",Open,,Metrics tied to specific grant requirements
+ACTIVITY TYPE,Add Option,Training,Open,,
+ACTIVITY TYPE,Add Option,Community of Practice,Open,,
+ACTIVITY TYPE,Add Option,Organizational Policy Review,Open,,
+ACTIVITY TYPE,Add Option,Reflective Practice Sessions,Open,,
+ACTIVITY TYPE,Add Option,Organizational/Site Staff Meetings,Open,,
+ACTIVITY TYPE,Add Option,Meeting Facilitation,Open,,
+ACTIVITY TYPE,Add Option,Resources and Curriculum Review,Open,,
+CASE TYPE,Clarification,Are some case types actually sub-options (dropdowns) of others?,Open,,Flagged for discussion at next meeting
+CASE TYPE,Reword,Shift YHDP to Demonstration Project Support,Open,,
+CASE TYPE,Add Option,Research and/or Research Support,Open,,
+ORGANIZATION TYPE,Clarification,Will Organization Type be check-all-that-apply?,Open,,Format/UX question
+ORGANIZATION TYPE,Add Option,Community Entities,Open,,
+ORGANIZATION TYPE,Clarification,Several org types may fit under Service Provider — clarify hierarchy,Open,,
+ORGANIZATION TYPE,Add Option,Child Welfare,Open,,
+ORGANIZATION TYPE,Add Option,Justice,Open,,
+ORGANIZATION TYPE,Add Option,Indigenous Led,Open,,
+ORGANIZATION TYPE,Add Option,LGBTQIA+,Open,,
+ORGANIZATION TYPE,Add Option,"Serves - Adults, Youth, Families",Open,,Population-served designation
+PROJECT TYPE,Reword,Remove YHDP — Demonstration Projects already covers this,Open,,
+RECORD TYPE,Add Option,Testimonials,Open,,
+RECORD TYPE,Add Option,Success Stories,Open,,
+ROLE TYPE,Add Option,Researcher,Open,,
+ROLE TYPE,Enhancement,"Specify lived experience expertise subtypes: Youth Homelessness, Indigenous, LGBTQIA+, Black and Racialized, Child Welfare",Open,,Consider as sub-categories or tags under Lived Experience roles
