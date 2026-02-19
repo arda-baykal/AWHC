@@ -1,0 +1,6 @@
+event_status_type_id,event_status_type_name,event_status_type_code,event_status_type_description,event_status_type_display_order,event_status_type_is_active,source
+EST-CANC,Cancelled,CANCELLED,,10,true,EXISTING
+EST-COMP,Completed,COMPLETED,,20,true,EXISTING
+EST-CONF,Confirmed,CONFIRMED,,30,true,EXISTING
+EST-PLAN,Planning,PLANNING,,40,true,EXISTING
+EST-POST,Postponed,POSTPONED,,50,true,NEW - FB-28

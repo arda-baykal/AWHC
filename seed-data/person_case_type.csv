@@ -1,0 +1,4 @@
+person_case_type_id,person_case_type_name,person_case_type_code,person_case_type_description,person_case_type_display_order,person_case_type_is_active,source
+PCT-ELDE,Elders,ELDERS,,10,true,NEW - FB-33
+PCT-LIVEXP,Lived Expert,LIVED_EXPERT,,20,true,NEW - FB-35
+PCT-VOLU,Volunteers,VOLUNTEERS,,30,true,NEW - FB-34

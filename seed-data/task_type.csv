@@ -1,0 +1,4 @@
+task_type_id,task_type_name,task_type_code,task_type_description,task_type_display_order,task_type_is_active,source
+TT-COLUME,Coffee/Lunch Meeting,COFFEE_OR_LUNCH_MEETING,Relationship-building activity,10,true,NEW - FB-37
+TT-QUCATE,Quick Call/Text,QUICK_CALL_OR_TEXT,Relationship-building activity,20,true,NEW - FB-37
+TT-RECHIN,Relationship Check-in,RELATIONSHIP_CHECK_IN,Relationship-building activity,30,true,NEW - FB-37

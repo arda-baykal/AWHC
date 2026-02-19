@@ -1,0 +1,18 @@
+role_type_id,role_type_name,role_type_code,role_type_description,role_type_display_order,role_type_is_active,parent_name,source
+RT-COFAC,Co-Facilitator,CO_FACILITATOR,,10,true,,EXISTING
+RT-COMPAR,Community Partner,COMMUNITY_PARTNER,,20,true,,EXISTING
+RT-ELDE,Elder,ELDER,,30,true,,NEW - FB-36
+RT-FROWOR,Frontline Worker,FRONTLINE_WORKER,,40,true,,EXISTING
+RT-KEYSPE,Keynote Speaker,KEYNOTE_SPEAKER,,50,true,,EXISTING
+RT-LIEXEX,Lived Experience Expert,LIVED_EXPERIENCE_EXPERT,Parent category for lived experience subtypes,60,true,,NEW - FB-75
+RT-LEBAR,Lived Experience - Black and Racialized,LIVED_EXPERIENCE_BLACK_AND_RACIALIZED,,70,true,Lived Experience Expert,NEW - FB-75
+RT-LECW,Lived Experience - Child Welfare,LIVED_EXPERIENCE_CHILD_WELFARE,,80,true,Lived Experience Expert,NEW - FB-75
+RT-LIEXIN,Lived Experience - Indigenous,LIVED_EXPERIENCE_INDIGENOUS,,90,true,Lived Experience Expert,NEW - FB-75
+RT-LIEXLG,Lived Experience - LGBTQIA+,LIVED_EXPERIENCE_LGBTQIAPLUS,,100,true,Lived Experience Expert,NEW - FB-75
+RT-LEYH,Lived Experience - Youth Homelessness,LIVED_EXPERIENCE_YOUTH_HOMELESSNESS,,110,true,Lived Experience Expert,NEW - FB-75
+RT-PANE,Panelist,PANELIST,,120,true,,EXISTING
+RT-PROCOO,Program Coordinator,PROGRAM_COORDINATOR,,130,true,,EXISTING
+RT-PRODIR,Program Director,PROGRAM_DIRECTOR,,140,true,,EXISTING
+RT-PROPAR,Program Participant,PROGRAM_PARTICIPANT,,150,true,,EXISTING
+RT-RESE,Researcher,RESEARCHER,,160,true,,NEW - FB-74
+RT-SENFAC,Senior Facilitator,SENIOR_FACILITATOR,,170,true,,EXISTING

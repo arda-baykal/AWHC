@@ -1,0 +1,3 @@
+record_type_id,record_type_name,record_type_code,record_type_description,record_type_display_order,record_type_is_active,source
+RCT-SUCSTO,Success Stories,SUCCESS_STORIES,,10,true,NEW - FB-73
+RCT-TEST,Testimonials,TESTIMONIALS,,20,true,NEW - FB-72
