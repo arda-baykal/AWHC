@@ -1,0 +1,20 @@
+activity_type_id,activity_type_name,activity_type_code,activity_type_description,activity_type_display_order,activity_type_is_active,parent_name,source
+ACT-ACCO,Accounting,ACCOUNTING,,10,true,,NEW - FB-22
+ACT-BODM,Board of Directors Management,BOARD_OF_DIRECTORS_MANAGEMENT,,20,true,,NEW - FB-18
+ACT-CHSTMA,Charity Status Management,CHARITY_STATUS_MANAGEMENT,,30,true,,NEW - FB-20
+ACT-COHREL,COH Relationship,COH_RELATIONSHIP,Parent-level category,40,true,,NEW - FB-16
+ACT-COOFPR,Community of Practice,COMMUNITY_OF_PRACTICE,,50,true,,NEW - FB-54
+ACT-COMP,Compliance,COMPLIANCE,,60,true,,NEW - FB-19
+ACT-EVEPLA,Event Planning,EVENT_PLANNING,,70,true,,NEW - FB-17
+ACT-GOVE,Governance,GOVERNANCE,,80,true,,NEW - FB-21
+ACT-MEEFAC,Meeting Facilitation,MEETING_FACILITATION,,90,true,,NEW - FB-58
+ACT-ORPORE,Organizational Policy Review,ORGANIZATIONAL_POLICY_REVIEW,,100,true,,NEW - FB-55
+ACT-OSSM,Organizational/Site Staff Meetings,ORGANIZATIONAL_OR_SITE_STAFF_MEETINGS,,110,true,,NEW - FB-57
+ACT-PAGR,Policy and Government Relations,POLICY_AND_GOVERNMENT_RELATIONS,Parent-level category,120,true,,NEW - FB-43
+ACT-MECISE,Meeting - Civil Servant,MEETING_CIVIL_SERVANT,Lobbying Act tracking: meeting with civil servant,130,true,Policy and Government Relations,NEW - FB-38
+ACT-MEEPOL,Meeting - Politician,MEETING_POLITICIAN,Lobbying Act tracking: meeting with politician,140,true,Policy and Government Relations,NEW - FB-38
+ACT-PRCISE,Prep - Civil Servant,PREP_CIVIL_SERVANT,Lobbying Act tracking: prep for civil servant meeting,150,true,Policy and Government Relations,NEW - FB-38
+ACT-PREPOL,Prep - Politician,PREP_POLITICIAN,Lobbying Act tracking: prep for politician meeting,160,true,Policy and Government Relations,NEW - FB-38
+ACT-REPRSE,Reflective Practice Sessions,REFLECTIVE_PRACTICE_SESSIONS,,170,true,,NEW - FB-56
+ACT-RACR,Resources and Curriculum Review,RESOURCES_AND_CURRICULUM_REVIEW,,180,true,,NEW - FB-59
+ACT-TRAI,Training,TRAINING,,190,true,,NEW - FB-53

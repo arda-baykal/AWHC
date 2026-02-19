@@ -1,0 +1,6 @@
+event_type_id,event_type_name,event_type_code,event_type_description,event_type_display_order,event_type_is_active,source
+EVT-BOAMEE,Board Meeting,BOARD_MEETING,,10,true,NEW - FB-29
+EVT-BOARET,Board Retreat,BOARD_RETREAT,,20,true,NEW - FB-30
+EVT-CONF,Conference,CONFERENCE,,30,true,EXISTING
+EVT-TRAEVE,Training Event,TRAINING_EVENT,,40,true,EXISTING
+EVT-WORK,Workshop,WORKSHOP,,50,true,EXISTING

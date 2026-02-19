@@ -1,0 +1,5 @@
+program_type_id,program_type_name,program_type_code,program_type_description,program_type_display_order,program_type_is_active,source
+PGT-CORPRO,Core Program,CORE_PROGRAM,,10,true,EXISTING
+PGT-MTSPAP,Making the Shift Prevention Awards Program,MAKING_THE_SHIFT_PREVENTION_AWARDS_PROGRAM,,20,true,NEW - FB-44
+PGT-PILPRO,Pilot Program,PILOT_PROGRAM,,30,true,EXISTING
+PGT-SUPPRO,Support Program,SUPPORT_PROGRAM,,40,true,EXISTING

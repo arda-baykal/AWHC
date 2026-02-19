@@ -1,0 +1,5 @@
+project_type_id,project_type_name,project_type_code,project_type_description,project_type_display_order,project_type_is_active,source
+PJT-CORPRO,Core Program,CORE_PROGRAM,,10,true,EXISTING
+PJT-PILPRO,Pilot Program,PILOT_PROGRAM,,20,true,EXISTING
+PJT-SUPPRO,Support Program,SUPPORT_PROGRAM,,30,true,EXISTING
+PJT-YHDP,YHDP,YHDP,,40,false,DEACTIVATE - FB-71: Demonstration Projects covers this

@@ -1,0 +1,8 @@
+event_characteristic_type_id,event_characteristic_type_name,event_characteristic_type_code,event_characteristic_type_description,event_characteristic_type_display_order,event_characteristic_type_is_active,source
+ECT-CECRAV,CEU Credits Available,CEU_CREDITS_AVAILABLE,,10,true,EXISTING
+ECT-HYBEVE,Hybrid Event,HYBRID_EVENT,,20,true,EXISTING
+ECT-INPEEV,In-Person Event,IN_PERSON_EVENT,,30,true,EXISTING
+ECT-INTE,International,INTERNATIONAL,International flag for Conferences,40,true,NEW - FB-31
+ECT-MATPRO,Materials Provided,MATERIALS_PROVIDED,,50,true,EXISTING
+ECT-MULDAY,Multi-Day,MULTI_DAY,,60,true,EXISTING
+ECT-REGREQ,Registration Required,REGISTRATION_REQUIRED,,70,true,EXISTING

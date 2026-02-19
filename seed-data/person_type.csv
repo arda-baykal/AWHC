@@ -1,0 +1,11 @@
+person_type_id,person_type_name,person_type_code,person_type_description,person_type_display_order,person_type_is_active,source
+PT-AWHDIR,AWHC Director,AWHC_DIRECTOR,,10,true,REWORD - FB-9: Rename to avoid confusion with Board Member
+PT-BOAMEM,Board Member,BOARD_MEMBER,,20,true,NEW - FB-10
+PT-CLIE,Client,CLIENT,,30,true,EXISTING
+PT-CONS,Consultant,CONSULTANT,,40,true,NEW - FB-13
+PT-ELDE,Elder,ELDER,,50,true,NEW - FB-14
+PT-ELEOFF,Elected Official,ELECTED_OFFICIAL,,60,true,NEW - FB-12
+PT-EXTE,External,EXTERNAL,,70,true,EXISTING
+PT-PART,Participant,PARTICIPANT,,80,true,EXISTING
+PT-STAF,Staff,STAFF,,90,true,EXISTING
+PT-VOLU,Volunteer,VOLUNTEER,,100,true,NEW - FB-11
