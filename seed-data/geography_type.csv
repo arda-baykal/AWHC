@@ -1,0 +1,9 @@
+geography_type_id,geography_type_name,geography_type_code,geography_type_description,geography_type_display_order,geography_type_is_active,source
+GEO-ALBE,Alberta,ALBERTA,,10,true,EXISTING
+GEO-ATLCAN,Atlantic Canada,ATLANTIC_CANADA,,20,true,NEW - FB-5
+GEO-BRICOL,British Columbia,BRITISH_COLUMBIA,,30,true,EXISTING
+GEO-INTE,International,INTERNATIONAL,,40,true,NEW - FB-8
+GEO-SUBU,Suburban,SUBURBAN,,50,true,NEW - FB-3
+GEO-THENOR,The North,THE_NORTH,,60,true,NEW - FB-6
+GEO-USA,USA,USA,,70,true,NEW - FB-7
+GEO-WESCAN,Western Canada,WESTERN_CANADA,,80,true,NEW - FB-4

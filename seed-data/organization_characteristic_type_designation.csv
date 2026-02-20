@@ -1,0 +1,3 @@
+organization_characteristic_type_designation_id,organization_characteristic_type_designation_name,organization_characteristic_type_designation_code,organization_characteristic_type_designation_description,organization_characteristic_type_designation_display_order,organization_characteristic_type_designation_is_active,source
+OCTD-CANA,Canadian,CANADIAN,,10,true,NEW - FB-32
+OCTD-INTE,International,INTERNATIONAL,,20,true,NEW - FB-32

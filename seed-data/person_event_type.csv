@@ -1,0 +1,10 @@
+person_event_type_id,person_event_type_name,person_event_type_code,person_event_type_description,person_event_type_display_order,person_event_type_is_active,source
+PET-COFAC,Co-Facilitator,CO_FACILITATOR,,10,true,EXISTING
+PET-ELDE,Elder,ELDER,,20,true,NEW - FB-26
+PET-KEYN,Keynote,KEYNOTE,,30,true,NEW - FB-23
+PET-LEAFAC,Lead Facilitator,LEAD_FACILITATOR,,40,true,EXISTING
+PET-LIEXCO,Lived Experience Committee,LIVED_EXPERIENCE_COMMITTEE,,50,true,NEW - FB-27
+PET-PANE,Panel,PANEL,,60,true,NEW - FB-24
+PET-PART,Participant,PARTICIPANT,,70,true,EXISTING
+PET-RECI,Recipient,RECIPIENT,,80,true,EXISTING
+PET-VOLU,Volunteer,VOLUNTEER,,90,true,NEW - FB-25

@@ -1,0 +1,75 @@
+Row,Category,Feedback Type,Specific Request,Original Status,What We Did,Status,Seed CSV File,Notes
+1,GENERAL,Enhancement,Alphabetize options in each category dropdown,Open,Set display_order values alphabetically in all 16 seed CSVs,Done,All CSVs,Every CSV is sorted A-Z with display_order 10/20/30 etc.
+2,GEOGRAPHY,Add Option,Suburban,Open,Added 'Suburban' to geography_type seed CSV,Done,geography_type.csv,
+3,GEOGRAPHY,Add Option,Western Canada,Open,Added 'Western Canada' to geography_type seed CSV,Done,geography_type.csv,
+4,GEOGRAPHY,Add Option,Atlantic Canada,Open,Added 'Atlantic Canada' to geography_type seed CSV,Done,geography_type.csv,
+5,GEOGRAPHY,Add Option,The North,Open,Added 'The North' to geography_type seed CSV,Done,geography_type.csv,
+6,GEOGRAPHY,Add Option,USA,Open,Added 'USA' to geography_type seed CSV,Done,geography_type.csv,Client noted may need narrower breakdown later
+7,GEOGRAPHY,Add Option,International,Open,Added 'International' to geography_type seed CSV,Done,geography_type.csv,Client noted consider breakdown by country/continent
+8,PERSON TYPE,Reword,AWHC Director - misleading,Open,Flagged in person_type seed CSV — row marked REWORD. Needs client to confirm new name.,Needs Client Input,person_type.csv,Suggest renaming to 'Executive Director' or 'Director - AWHC Staff'. Old name kept in source column.
+9,PERSON TYPE,Add Option,Board Member,Open,Added 'Board Member' to person_type seed CSV,Done,person_type.csv,
+10,PERSON TYPE,Add Option,Volunteer,Open,Added 'Volunteer' to person_type seed CSV,Done,person_type.csv,
+11,PERSON TYPE,Add Option,Elected Official,Open,Added 'Elected Official' to person_type seed CSV,Done,person_type.csv,
+12,PERSON TYPE,Add Option,Consultant,Open,Added 'Consultant' to person_type seed CSV,Done,person_type.csv,
+13,PERSON TYPE,Add Option,Elder,Open,Added 'Elder' to person_type seed CSV,Done,person_type.csv,
+14,PROGRAM TYPE,Clarification,HUD under Demonstration project - intentional?,Open,Not actioned — needs client confirmation,Needs Discussion,,HUD is a US org. Client needs to confirm if it stays under Demonstration Project.
+15,ACTIVITY TYPE,Add Category,COH Relationship,Open,Added 'COH Relationship' as a parent-level category in activity_type seed CSV,Done,activity_type.csv,
+16,ACTIVITY TYPE,Add Option,Event Planning,Open,Added 'Event Planning' to activity_type seed CSV,Done,activity_type.csv,
+17,ACTIVITY TYPE,Add Option,Board of Directors Management,Open,Added 'Board of Directors Management' to activity_type seed CSV,Done,activity_type.csv,"Covers meeting planning, travel coordination, minute taking"
+18,ACTIVITY TYPE,Add Option,Compliance,Open,Added 'Compliance' to activity_type seed CSV,Done,activity_type.csv,Annual government form submissions
+19,ACTIVITY TYPE,Add Option,Charity Status Management,Open,Added 'Charity Status Management' to activity_type seed CSV,Done,activity_type.csv,Separate from general Admin
+20,ACTIVITY TYPE,Add Option,Governance,Open,Added 'Governance' to activity_type seed CSV,Done,activity_type.csv,Separate from general Admin
+21,ACTIVITY TYPE,Add Option,Accounting,Open,Added 'Accounting' to activity_type seed CSV,Done,activity_type.csv,"Covers expense claims, budget management"
+22,PERSON-EVENT,Add Option,Keynote,Open,Added 'Keynote' to person_event_type seed CSV,Done,person_event_type.csv,Separate from Presenter
+23,PERSON-EVENT,Add Option,Panel,Open,Added 'Panel' to person_event_type seed CSV,Done,person_event_type.csv,
+24,PERSON-EVENT,Add Option,Volunteer,Open,Added 'Volunteer' to person_event_type seed CSV,Done,person_event_type.csv,
+25,PERSON-EVENT,Add Option,Elder,Open,Added 'Elder' to person_event_type seed CSV,Done,person_event_type.csv,
+26,PERSON-EVENT,Add Option,Lived Experience Committee,Open,Added 'Lived Experience Committee' to person_event_type seed CSV,Done,person_event_type.csv,
+27,EVENT STATUS TYPE,Add Option,Postponed,Open,Added 'Postponed' to event_status_type seed CSV,Done,event_status_type.csv,Different from Rescheduled — date still pending
+28,EVENT TYPE,Add Option,Board Meeting,Open,Added 'Board Meeting' to event_type seed CSV,Done,event_type.csv,
+29,EVENT TYPE,Add Option,Board Retreat,Open,Added 'Board Retreat' to event_type seed CSV,Done,event_type.csv,Annual in-person
+30,EVENT TYPE,Enhancement,Conferences - add International flag,Open,Added 'International' to event_characteristic_type seed CSV. This acts as a tag Aluko applies to conference events.,Done,event_characteristic_type.csv,Uses the characteristic pattern — no schema change needed
+31,ORGANIZATION TYPE,Enhancement,Add Canadian vs International designation,Open,Two things done: (1) New module added to YAML schema. (2) Seed CSV created with Canadian and International values.,Done,organization_characteristic_type_designation.csv,YAML schema change + seed data
+32,PERSON CASE TYPE,Add Option,Elders,Open,Added 'Elders' to person_case_type seed CSV,Done,person_case_type.csv,
+33,PERSON CASE TYPE,Add Option,Volunteers,Open,Added 'Volunteers' to person_case_type seed CSV,Done,person_case_type.csv,
+34,PERSON CASE TYPE,Add Option,Lived Expert,Open,Added 'Lived Expert' to person_case_type seed CSV,Done,person_case_type.csv,
+35,ROLE TYPE,Add Option,Elder,Open,Added 'Elder' to role_type seed CSV,Done,role_type.csv,
+36,TASK TYPE,Enhancement,Clarify relationship-building activities,Open,"Added 3 new task types: 'Quick Call/Text', 'Coffee/Lunch Meeting', 'Relationship Check-in'",Done,task_type.csv,"Gives a home for quick calls, texts, coffee dates, lunch meetings"
+37,ACTIVITY TYPE,Enhancement,Prep and Meetings - civil servants vs politicians (Lobbying Act),Open,"Added 4 sub-types under 'Policy and Government Relations': Meeting-Civil Servant, Meeting-Politician, Prep-Civil Servant, Prep-Politician",Done,activity_type.csv,Uses parent-child hierarchy for Lobbying Act compliance tracking
+38,DASHBOARD,Clarification,Define what qualifies as a Case versus a Program,Open,Not actioned — this is a discussion/glossary item,Skipped (Dashboard/Process),,Needs team glossary
+39,GENERAL,Enhancement,Create a glossary of terms for Mareto,Open,Not actioned — this is a documentation item,Skipped (Dashboard/Process),,
+40,DASHBOARD,Clarification,Theory of Change underpins Mareto installation?,Open,Not actioned — discussion item for Thursday meeting,Skipped (Dashboard/Process),,
+41,GENERAL,Enhancement,Discuss phased approach to what is tracked,Open,Not actioned — discussion item raised by Katie,Skipped (Dashboard/Process),,
+42,ACTIVITY TYPE,Add Category,Policy and Government Relations,Open,Added 'Policy and Government Relations' as a parent-level category in activity_type seed CSV,Done,activity_type.csv,Parent category for Lobbying Act sub-types
+43,PROGRAM TYPE,Add Option,Making the Shift Prevention Awards Program,Open,Added to program_type seed CSV,Done,program_type.csv,Auto-survey feature needs separate Corteza workflow — flagged for Aluko
+44,DASHBOARD,Clarification,Clarify distinction between Cases/Projects/Programs,Open,Not actioned — discussion item,Skipped (Dashboard/Process),,
+45,DASHBOARD,Enhancement,Track fee-for-service contracts,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+46,DASHBOARD,Enhancement,Track trainings count/type/attendees,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+47,DASHBOARD,Enhancement,Track fidelity reviews,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+48,DASHBOARD,Enhancement,Track Community of Practice sessions,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+49,DASHBOARD,Enhancement,Track satisfaction rates,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+50,DASHBOARD,Enhancement,Track organizational retention rate,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+51,DASHBOARD,Enhancement,Track grant-specific deliverables,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+52,ACTIVITY TYPE,Add Option,Training,Open,Added 'Training' to activity_type seed CSV,Done,activity_type.csv,
+53,ACTIVITY TYPE,Add Option,Community of Practice,Open,Added 'Community of Practice' to activity_type seed CSV,Done,activity_type.csv,
+54,ACTIVITY TYPE,Add Option,Organizational Policy Review,Open,Added 'Organizational Policy Review' to activity_type seed CSV,Done,activity_type.csv,
+55,ACTIVITY TYPE,Add Option,Reflective Practice Sessions,Open,Added 'Reflective Practice Sessions' to activity_type seed CSV,Done,activity_type.csv,
+56,ACTIVITY TYPE,Add Option,Organizational/Site Staff Meetings,Open,Added 'Organizational/Site Staff Meetings' to activity_type seed CSV,Done,activity_type.csv,
+57,ACTIVITY TYPE,Add Option,Meeting Facilitation,Open,Added 'Meeting Facilitation' to activity_type seed CSV,Done,activity_type.csv,
+58,ACTIVITY TYPE,Add Option,Resources and Curriculum Review,Open,Added 'Resources and Curriculum Review' to activity_type seed CSV,Done,activity_type.csv,
+59,CASE TYPE,Clarification,Are case types sub-options of others?,Open,Not actioned — but already supported by the parent field on case_type,Skipped (Already Supported),,The case_type module has a parent field for nesting. Aluko sets this when importing.
+60,CASE TYPE,Reword,Shift YHDP to Demonstration Project Support,Open,Renamed in case_type seed CSV. Source column shows old name.,Done,case_type.csv,Was 'Shift YHDP' — now 'Demonstration Project Support'
+61,CASE TYPE,Add Option,Research and/or Research Support,Open,Added to case_type seed CSV,Done,case_type.csv,
+62,ORGANIZATION TYPE,Clarification,Will Org Type be check-all-that-apply?,Open,Yes — set isMulti:true on organization-organization_type field in updated YAML,Done,N/A (YAML schema change),Organizations can now have multiple types
+63,ORGANIZATION TYPE,Add Option,Community Entities,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+64,ORGANIZATION TYPE,Clarification,Org types under Service Provider — clarify hierarchy,Open,Not actioned — but parent field already supports hierarchy,Skipped (Already Supported),,Aluko can set Service Provider as parent for applicable sub-types
+65,ORGANIZATION TYPE,Add Option,Child Welfare,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+66,ORGANIZATION TYPE,Add Option,Justice,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+67,ORGANIZATION TYPE,Add Option,Indigenous Led,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+68,ORGANIZATION TYPE,Add Option,LGBTQIA+,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+69,ORGANIZATION TYPE,Add Option,"Serves - Adults, Youth, Families",Open,Split into 3 separate values: Serves-Adults / Serves-Youth / Serves-Families,Done,organization_type.csv,Population-served designations
+70,PROJECT TYPE,Reword,Remove YHDP — Demonstration Projects covers it,Open,Marked YHDP as is_active=false in project_type seed CSV,Done,project_type.csv,Deactivated not deleted — preserves historical references
+71,RECORD TYPE,Add Option,Testimonials,Open,Added to record_type seed CSV,Done,record_type.csv,
+72,RECORD TYPE,Add Option,Success Stories,Open,Added to record_type seed CSV,Done,record_type.csv,
+73,ROLE TYPE,Add Option,Researcher,Open,Added to role_type seed CSV,Done,role_type.csv,
+74,ROLE TYPE,Enhancement,Lived experience subtypes,Open,"Added parent 'Lived Experience Expert' with 5 children: Youth Homelessness, Indigenous, LGBTQIA+, Black and Racialized, Child Welfare",Done,role_type.csv,Uses parent-child hierarchy in role_type

@@ -1,0 +1,12 @@
+organization_type_id,organization_type_name,organization_type_code,organization_type_description,organization_type_display_order,organization_type_is_active,source
+OT-CHIWEL,Child Welfare,CHILD_WELFARE,,10,true,NEW - FB-66
+OT-COMENT,Community Entities,COMMUNITY_ENTITIES,,20,true,NEW - FB-64
+OT-FOUN,Foundation,FOUNDATION,,30,true,EXISTING
+OT-GOVE,Government,GOVERNMENT,,40,true,EXISTING
+OT-INDLED,Indigenous Led,INDIGENOUS_LED,,50,true,NEW - FB-68
+OT-JUST,Justice,JUSTICE,,60,true,NEW - FB-67
+OT-LGBT,LGBTQIA+,LGBTQIAPLUS,,70,true,NEW - FB-69
+OT-NONPRO,Non-Profit,NON_PROFIT,,80,true,EXISTING
+OT-SERADU,Serves - Adults,SERVES_ADULTS,,90,true,NEW - FB-70
+OT-SERFAM,Serves - Families,SERVES_FAMILIES,,100,true,NEW - FB-70
+OT-SERYOU,Serves - Youth,SERVES_YOUTH,,110,true,NEW - FB-70
