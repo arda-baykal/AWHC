@@ -100,7 +100,7 @@ const sampleEvents = [
       { name: 'A Way Home Canada', role: 'Host' },
       { name: 'Government of Canada', role: 'Sponsor' }
     ],
-    characteristics: ['In-Person Event', 'Multi-Day', 'CEU Credits Available'],
+    characteristics: ['In-Person Event', 'Multi-Day', 'CEU Credits Available', 'International'],
     people: ['PER-008', 'PER-009'],
     services: [
       { name: 'Keynote Sessions', type: 'Presentation', duration: '6 hours', description: 'Expert presentations on current research.' }
@@ -433,11 +433,13 @@ const sampleCases = [
 ];
 
 const sampleOrganizations = [
-  { id: 'ORG-001', name: 'A Way Home Canada', type: 'Non-Profit', location: 'National', peopleCount: 12, caseCount: 3, status: 'Active' },
-  { id: 'ORG-002', name: 'Calgary Youth Services', type: 'Non-Profit', location: 'Calgary, AB', peopleCount: 8, caseCount: 1, status: 'Active' },
-  { id: 'ORG-003', name: 'BC Housing Authority', type: 'Government', location: 'Victoria, BC', peopleCount: 3, caseCount: 1, status: 'Active' },
-  { id: 'ORG-004', name: 'Alberta Housing Foundation', type: 'Foundation', location: 'Edmonton, AB', peopleCount: 2, caseCount: 1, status: 'Active' },
-  { id: 'ORG-005', name: 'Government of Canada', type: 'Government', location: 'Ottawa, ON', peopleCount: 4, caseCount: 2, status: 'Active' }
+  { id: 'ORG-001', name: 'A Way Home Canada', type: 'Non-Profit', designation: 'Canadian', location: 'National', peopleCount: 12, caseCount: 3, status: 'Active' },
+  { id: 'ORG-002', name: 'Calgary Youth Services', type: 'Non-Profit', designation: 'Canadian', location: 'Calgary, AB', peopleCount: 8, caseCount: 1, status: 'Active' },
+  { id: 'ORG-003', name: 'BC Housing Authority', type: 'Government', designation: 'Canadian', location: 'Victoria, BC', peopleCount: 3, caseCount: 1, status: 'Active' },
+  { id: 'ORG-004', name: 'Alberta Housing Foundation', type: 'Foundation', designation: 'Canadian', location: 'Edmonton, AB', peopleCount: 2, caseCount: 1, status: 'Active' },
+  { id: 'ORG-005', name: 'Government of Canada', type: 'Government', designation: 'Canadian', location: 'Ottawa, ON', peopleCount: 4, caseCount: 2, status: 'Active' },
+  { id: 'ORG-006', name: 'National Alliance to End Homelessness', type: 'Non-Profit', designation: 'International', location: 'Washington, DC, USA', peopleCount: 2, caseCount: 0, status: 'Active' },
+  { id: 'ORG-007', name: 'Institute of Global Homelessness', type: 'Non-Profit', designation: 'International', location: 'Chicago, IL, USA', peopleCount: 1, caseCount: 1, status: 'Active' }
 ];
 
 const samplePrograms = [
@@ -984,6 +986,198 @@ const HomePage = ({ onNavigate, showNotification }) => {
         </div>
       </Card>
 
+      {/* Operations Tracker - Client Feedback Dashboard Enhancements */}
+      <div style={{ marginBottom: '24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+          <Icon name="monitoring" size={22} color="#1E3A5F" />
+          <h3 style={{ margin: 0, fontSize: '16px', color: '#1E3A5F', fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>Operations Tracker</h3>
+        </div>
+
+        {/* Row 1: Contracts, Trainings, Fidelity Reviews */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '16px' }}>
+          
+          {/* Fee-for-Service Contracts */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Fee-for-Service Contracts</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>8</div>
+              </div>
+              <Icon name="receipt_long" size={24} color="#0FB9B1" />
+            </div>
+            <div style={{ display: 'flex', gap: '16px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span style={{ color: '#0FB9B1' }}>6 Active</span>
+              <span style={{ color: '#7F8C9B' }}>2 Pending</span>
+            </div>
+            <div style={{ fontSize: '11px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', marginTop: '8px' }}>Dollar amounts tracked in QuickBooks</div>
+          </div>
+
+          {/* Trainings Tracker */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Trainings</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>12</div>
+              </div>
+              <Icon name="school" size={24} color="#0FB9B1" />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span style={{ color: '#0FB9B1' }}>9 Completed</span>
+              <span style={{ color: '#E8A317' }}>3 Scheduled</span>
+              <span style={{ color: '#1E3A5F' }}>287 Attendees</span>
+              <span style={{ color: '#7F8C9B' }}>4 Types</span>
+            </div>
+            <div style={{ marginTop: '8px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+              <div style={{ height: '4px', width: '75%', backgroundColor: '#0FB9B1', borderRadius: '2px' }}></div>
+            </div>
+            <div style={{ fontSize: '11px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', marginTop: '4px' }}>75% completion rate</div>
+          </div>
+
+          {/* Fidelity Reviews */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Fidelity Reviews</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>6</div>
+              </div>
+              <Icon name="verified" size={24} color="#4FD1C5" />
+            </div>
+            <div style={{ display: 'flex', gap: '16px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span style={{ color: '#0FB9B1' }}>4 Completed</span>
+              <span style={{ color: '#E8A317' }}>2 Scheduled</span>
+            </div>
+            <div style={{ marginTop: '8px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+              <div style={{ height: '4px', width: '67%', backgroundColor: '#4FD1C5', borderRadius: '2px' }}></div>
+            </div>
+            <div style={{ fontSize: '11px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', marginTop: '4px' }}>67% completion rate</div>
+          </div>
+        </div>
+
+        {/* Row 2: CoP Sessions, Satisfaction, Retention */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '16px' }}>
+          
+          {/* Community of Practice Sessions */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Community of Practice</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>18</div>
+              </div>
+              <Icon name="groups" size={24} color="#1E3A5F" />
+            </div>
+            <div style={{ fontSize: '13px', fontFamily: 'Lato, sans-serif', color: '#1E3A5F', marginBottom: '8px' }}>
+              Across 3 active CoPs
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span>Housing First: 8</span>
+              <span>Youth Outreach: 6</span>
+              <span>Indigenous Services: 4</span>
+              <span style={{ color: '#0FB9B1', fontWeight: 600 }}>82% attendance</span>
+            </div>
+          </div>
+
+          {/* Satisfaction Rates */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Satisfaction Rates</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#0FB9B1', fontFamily: 'Lato, sans-serif' }}>4.6/5.0</div>
+              </div>
+              <Icon name="sentiment_satisfied" size={24} color="#0FB9B1" />
+            </div>
+            <div style={{ fontSize: '13px', fontFamily: 'Lato, sans-serif', color: '#1E3A5F', marginBottom: '8px' }}>
+              By Site
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span>Calgary: 4.8</span>
+              <span>Vancouver: 4.5</span>
+              <span>Edmonton: 4.6</span>
+              <span>Toronto: 4.4</span>
+            </div>
+            <div style={{ fontSize: '13px', fontFamily: 'Lato, sans-serif', color: '#1E3A5F', marginTop: '8px', marginBottom: '4px' }}>
+              By Model
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span>Housing First: 4.7</span>
+              <span>Prevention: 4.5</span>
+            </div>
+          </div>
+
+          {/* Retention Rate */}
+          <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div>
+                <div style={{ fontSize: '12px', color: '#7F8C9B', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>Org Retention Rate</div>
+                <div style={{ fontSize: '28px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>87%</div>
+              </div>
+              <Icon name="autorenew" size={24} color="#1E3A5F" />
+            </div>
+            <div style={{ display: 'flex', gap: '16px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              <span style={{ color: '#1E3A5F' }}>26 of 30 organizations</span>
+            </div>
+            <div style={{ marginTop: '8px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+              <div style={{ height: '4px', width: '87%', backgroundColor: '#1E3A5F', borderRadius: '2px' }}></div>
+            </div>
+            <div style={{ fontSize: '12px', fontFamily: 'Lato, sans-serif', marginTop: '8px' }}>
+              <span style={{ color: '#0FB9B1' }}>4 returning orgs</span>
+              <span style={{ color: '#7F8C9B', marginLeft: '12px' }}>this quarter</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 3: Grant Deliverables (full width) */}
+        <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #E8EDF2' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Icon name="assignment_turned_in" size={22} color="#1E3A5F" />
+              <div style={{ fontSize: '14px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif' }}>Grant-Specific Deliverables</div>
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            {/* ESDC Grant */}
+            <div style={{ padding: '16px', backgroundColor: '#F8FAFB', borderRadius: '6px', border: '1px solid #E8EDF2' }}>
+              <div style={{ fontSize: '13px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif', marginBottom: '12px' }}>ESDC Grant</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+                <div>
+                  <div style={{ color: '#7F8C9B', marginBottom: '2px' }}>Young People Reached</div>
+                  <div style={{ fontSize: '20px', fontWeight: 700, color: '#1E3A5F' }}>342 <span style={{ fontSize: '12px', fontWeight: 400, color: '#7F8C9B' }}>/ 500 target</span></div>
+                  <div style={{ marginTop: '4px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+                    <div style={{ height: '4px', width: '68%', backgroundColor: '#0FB9B1', borderRadius: '2px' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div style={{ color: '#7F8C9B', marginBottom: '2px' }}>FNS Reached</div>
+                  <div style={{ fontSize: '20px', fontWeight: 700, color: '#1E3A5F' }}>28 <span style={{ fontSize: '12px', fontWeight: 400, color: '#7F8C9B' }}>/ 40 target</span></div>
+                  <div style={{ marginTop: '4px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+                    <div style={{ height: '4px', width: '70%', backgroundColor: '#0FB9B1', borderRadius: '2px' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* INFC Grant */}
+            <div style={{ padding: '16px', backgroundColor: '#F8FAFB', borderRadius: '6px', border: '1px solid #E8EDF2' }}>
+              <div style={{ fontSize: '13px', fontWeight: 700, color: '#1E3A5F', fontFamily: 'Lato, sans-serif', marginBottom: '12px' }}>INFC Grant</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+                <div>
+                  <div style={{ color: '#7F8C9B', marginBottom: '2px' }}>CEs Contacted</div>
+                  <div style={{ fontSize: '20px', fontWeight: 700, color: '#1E3A5F' }}>45 <span style={{ fontSize: '12px', fontWeight: 400, color: '#7F8C9B' }}>/ 60 target</span></div>
+                  <div style={{ marginTop: '4px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+                    <div style={{ height: '4px', width: '75%', backgroundColor: '#4FD1C5', borderRadius: '2px' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div style={{ color: '#7F8C9B', marginBottom: '2px' }}>Reports Submitted</div>
+                  <div style={{ fontSize: '20px', fontWeight: 700, color: '#1E3A5F' }}>3 <span style={{ fontSize: '12px', fontWeight: 400, color: '#7F8C9B' }}>/ 4 target</span></div>
+                  <div style={{ marginTop: '4px', height: '4px', backgroundColor: '#E8EDF2', borderRadius: '2px' }}>
+                    <div style={{ height: '4px', width: '75%', backgroundColor: '#4FD1C5', borderRadius: '2px' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Quick Actions Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
         {[
@@ -1081,6 +1275,28 @@ const EventDetail = ({ event, onBack, showNotification, people }) => {
               <DataField label="Type"><TypeBadge type={event.type} /></DataField>
               <DataField label="Status"><StatusBadge status={event.status} /></DataField>
             </Card>
+            {event.characteristics && event.characteristics.length > 0 && (
+              <Card>
+                <SectionHeader icon="sell">Characteristics</SectionHeader>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  {event.characteristics.map((char, i) => (
+                    <span key={i} style={{ 
+                      padding: '6px 12px', 
+                      backgroundColor: char === 'International' ? '#FFF3E0' : '#F0F4F8', 
+                      borderRadius: '4px', 
+                      fontSize: '13px', 
+                      color: char === 'International' ? '#E65100' : '#1E3A5F', 
+                      fontFamily: 'Lato, sans-serif',
+                      fontWeight: char === 'International' ? 600 : 400,
+                      border: char === 'International' ? '1px solid #FFB74D' : 'none'
+                    }}>
+                      {char === 'International' && <Icon name="public" size={14} style={{ marginRight: '4px' }} />}
+                      {char}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            )}
             <Card>
               <SectionHeader icon="schedule">Dates & Timeline</SectionHeader>
               <DataField label="Start Date" icon="calendar_today">
@@ -1660,8 +1876,24 @@ const OrganizationsList = ({ showNotification }) => (
           </div>
           <StatusBadge status={org.status} />
         </div>
-        <div style={{ display: 'flex', gap: '16px' }}>
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
           <TypeBadge type={org.type} />
+          {org.designation && (
+            <span style={{ 
+              padding: '4px 10px', 
+              borderRadius: '4px', 
+              fontSize: '12px', 
+              fontFamily: 'Lato, sans-serif',
+              fontWeight: 600,
+              backgroundColor: org.designation === 'International' ? '#FFF3E0' : '#E8F5E9',
+              color: org.designation === 'International' ? '#E65100' : '#2E7D32',
+              border: org.designation === 'International' ? '1px solid #FFB74D' : '1px solid #A5D6A7',
+              display: 'flex', alignItems: 'center', gap: '4px'
+            }}>
+              <Icon name={org.designation === 'International' ? 'public' : 'flag'} size={14} />
+              {org.designation}
+            </span>
+          )}
           <QuickStat icon="group" count={org.peopleCount} label="People" />
           <QuickStat icon="folder" count={org.caseCount} label="Cases" />
         </div>
