@@ -57,12 +57,12 @@ Row,Category,Feedback Type,Specific Request,Original Status,What We Did,Status,S
 56,ACTIVITY TYPE,Add Option,Organizational/Site Staff Meetings,Open,Added 'Organizational/Site Staff Meetings' to activity_type seed CSV,Done,activity_type.csv,
 57,ACTIVITY TYPE,Add Option,Meeting Facilitation,Open,Added 'Meeting Facilitation' to activity_type seed CSV,Done,activity_type.csv,
 58,ACTIVITY TYPE,Add Option,Resources and Curriculum Review,Open,Added 'Resources and Curriculum Review' to activity_type seed CSV,Done,activity_type.csv,
-59,CASE TYPE,Clarification,Are case types sub-options of others?,Open,Not actioned — but already supported by the parent field on case_type,Skipped (Already Supported),,The case_type module has a parent field for nesting. Aluko sets this when importing.
+59,CASE TYPE,Clarification,Are case types sub-options of others?,Open,Parent field (case_type-parent) exists on case_type module. Current 6 types kept flat — hierarchy available when needed. parent_name column added to seed CSV.,Done,case_type.csv,KGL T04/T06 compliant. No sub-groupings identified in current types but schema supports it.
 60,CASE TYPE,Reword,Shift YHDP to Demonstration Project Support,Open,Renamed in case_type seed CSV. Source column shows old name.,Done,case_type.csv,Was 'Shift YHDP' — now 'Demonstration Project Support'
 61,CASE TYPE,Add Option,Research and/or Research Support,Open,Added to case_type seed CSV,Done,case_type.csv,
-62,ORGANIZATION TYPE,Clarification,Will Org Type be check-all-that-apply?,Open,Yes — set isMulti:true on organization-organization_type field in updated YAML,Done,N/A (YAML schema change),Organizations can now have multiple types
+62,ORGANIZATION TYPE,Clarification,Will Org Type be check-all-that-apply?,Open,Yes — isMulti:true set on organization-organization_type field in YAML and now applied to live Corteza instance,Done,N/A (YAML + live Corteza),KGL M03 compliant. Organizations can now have multiple types. Live instance updated.
 63,ORGANIZATION TYPE,Add Option,Community Entities,Open,Added to organization_type seed CSV,Done,organization_type.csv,
-64,ORGANIZATION TYPE,Clarification,Org types under Service Provider — clarify hierarchy,Open,Not actioned — but parent field already supports hierarchy,Skipped (Already Supported),,Aluko can set Service Provider as parent for applicable sub-types
+64,ORGANIZATION TYPE,Clarification,Org types under Service Provider — clarify hierarchy,Open,"Added Service Provider (OT-SERPRO) as parent. Set Child Welfare, Justice, Indigenous Led, LGBTQIA+ as children via organization_type-parent field in seed CSV and live Corteza.",Done,organization_type.csv,KGL T02/T06 compliant. 4 children nested under Service Provider parent.
 65,ORGANIZATION TYPE,Add Option,Child Welfare,Open,Added to organization_type seed CSV,Done,organization_type.csv,
 66,ORGANIZATION TYPE,Add Option,Justice,Open,Added to organization_type seed CSV,Done,organization_type.csv,
 67,ORGANIZATION TYPE,Add Option,Indigenous Led,Open,Added to organization_type seed CSV,Done,organization_type.csv,

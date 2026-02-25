@@ -57,12 +57,12 @@ ACTIVITY TYPE,Add Option,Reflective Practice Sessions,Done,,
 ACTIVITY TYPE,Add Option,Organizational/Site Staff Meetings,Done,,
 ACTIVITY TYPE,Add Option,Meeting Facilitation,Done,,
 ACTIVITY TYPE,Add Option,Resources and Curriculum Review,Done,,
-CASE TYPE,Clarification,Are some case types actually sub-options (dropdowns) of others?,Open,,Flagged for discussion at next meeting
+CASE TYPE,Clarification,Are some case types actually sub-options (dropdowns) of others?,Done,,Parent field exists on case_type module (KGL T04/T06 compliant). Current 6 types kept flat; hierarchy available when needed.
 CASE TYPE,Reword,Shift YHDP to Demonstration Project Support,Done,,
 CASE TYPE,Add Option,Research and/or Research Support,Done,,
-ORGANIZATION TYPE,Clarification,Will Organization Type be check-all-that-apply?,Open,,Format/UX question
+ORGANIZATION TYPE,Clarification,Will Organization Type be check-all-that-apply?,Done,,isMulti:true set on organization-organization_type field in YAML and live Corteza instance (KGL M03 compliant)
 ORGANIZATION TYPE,Add Option,Community Entities,Done,,
-ORGANIZATION TYPE,Clarification,Several org types may fit under Service Provider — clarify hierarchy,Open,,
+ORGANIZATION TYPE,Clarification,Several org types may fit under Service Provider — clarify hierarchy,Done,,"Service Provider parent added (OT-SERPRO). Child Welfare, Justice, Indigenous Led, LGBTQIA+ nested as children (KGL T02/T06)"
 ORGANIZATION TYPE,Add Option,Child Welfare,Done,,
 ORGANIZATION TYPE,Add Option,Justice,Done,,
 ORGANIZATION TYPE,Add Option,Indigenous Led,Done,,
