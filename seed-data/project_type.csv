@@ -2,4 +2,5 @@ project_type_id,project_type_name,project_type_code,project_type_description,pro
 PJT-CORPRO,Core Program,CORE_PROGRAM,,10,true,EXISTING
 PJT-PILPRO,Pilot Program,PILOT_PROGRAM,,20,true,EXISTING
 PJT-SUPPRO,Support Program,SUPPORT_PROGRAM,,30,true,EXISTING
+PJT-DEPROJ,Demonstration Projects,DEMONSTRATION_PROJECTS,,35,true,NEW - FB-71: Replaces YHDP
 PJT-YHDP,YHDP,YHDP,,40,false,DEACTIVATE - FB-71: Demonstration Projects covers this

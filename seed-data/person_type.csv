@@ -1,5 +1,5 @@
 person_type_id,person_type_name,person_type_code,person_type_description,person_type_display_order,person_type_is_active,source
-PT-AWHDIR,AWHC Director,AWHC_DIRECTOR,,10,true,REWORD - FB-9: Rename to avoid confusion with Board Member
+PT-AWHDIR,AWHC Staff Member,AWHC_STAFF_MEMBER,,10,true,REWORD - FB-9: Renamed from 'AWHC Director' to avoid confusion with Board Member
 PT-BOAMEM,Board Member,BOARD_MEMBER,,20,true,NEW - FB-10
 PT-CLIE,Client,CLIENT,,30,true,EXISTING
 PT-CONS,Consultant,CONSULTANT,,40,true,NEW - FB-13
