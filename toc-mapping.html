@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Way Home Canada — Theory of Change Mapping in Mareto</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep-navy: #0B1F33;
+  --midnight-blue: #102A43;
+  --teal-core: #0FB9B1;
+  --aqua-light: #4FD1C5;
+  --slate-blue: #1E3A5F;
+  --white: #FFFFFF;
+  --near-black: #0A0A0A;
+  --border-light: #E5E7EB;
+  --bg-subtle: #F9FAFB;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--near-black);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.slide {
+  min-height: 100vh;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  page-break-after: always;
+}
+
+.slide-title { background: linear-gradient(to right, #0B1F33, #0FB9B1); color: var(--white); }
+.slide-section { background: linear-gradient(to bottom, #102A43, #0B1F33); color: var(--white); }
+.slide-content { background: var(--white); }
+.slide-content-alt { background: var(--bg-subtle); }
+
+h1 { font-weight: 700; font-size: 2.8rem; line-height: 1.2; margin-bottom: 16px; }
+h2 { font-weight: 700; font-size: 2rem; line-height: 1.3; margin-bottom: 24px; }
+h3 { font-weight: 700; font-size: 1.2rem; margin-bottom: 12px; color: var(--slate-blue); }
+.subtitle { font-weight: 300; font-size: 1.4rem; opacity: 0.85; }
+.label { font-weight: 300; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+.slide-title .label { color: var(--aqua-light); }
+.slide-section .label { color: var(--aqua-light); }
+.slide-content .label { color: var(--teal-core); }
+
+p, li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px; }
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+th { background: var(--deep-navy); color: var(--white); font-weight: 400; text-align: left; padding: 12px 16px; }
+td { padding: 12px 16px; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+
+.category-row {
+  background: var(--deep-navy);
+  color: var(--aqua-light);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Flow diagram */
+.flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+}
+
+.flow-tier {
+  width: 100%;
+  max-width: 860px;
+  padding: 20px 28px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.flow-tier::after {
+  content: '\2193';
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--teal-core);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.flow-tier:last-child::after { display: none; }
+
+.flow-label {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  opacity: 0.75;
+}
+
+.flow-main { font-size: 0.95rem; font-weight: 400; margin-bottom: 4px; }
+.flow-detail { font-size: 0.82rem; font-weight: 300; opacity: 0.7; }
+.flow-where { font-size: 0.78rem; font-weight: 700; margin-top: 6px; padding: 3px 10px; display: inline-block; border-radius: 4px; }
+
+.t-impact { background: var(--deep-navy); color: var(--white); border: 2px solid var(--teal-core); }
+.t-long { background: var(--slate-blue); color: var(--white); }
+.t-med { background: #1a4a6e; color: var(--white); }
+.t-short { background: #1d5a7a; color: var(--white); }
+.t-activity { background: var(--teal-core); color: var(--deep-navy); }
+.t-input { background: var(--bg-subtle); color: var(--near-black); border: 1px solid var(--border-light); }
+
+.w-green { background: rgba(15,185,177,0.25); }
+.w-blue { background: rgba(30,58,95,0.2); }
+
+/* Indicator cards */
+.indicator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.indicator-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.indicator-header {
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.indicator-body {
+  padding: 12px 16px;
+}
+
+.indicator-body li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.ih-short { background: #1d5a7a; color: white; }
+.ih-med { background: #1a4a6e; color: white; }
+.ih-long { background: var(--slate-blue); color: white; }
+
+/* Next steps */
+.step-item {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.step-item:last-child { border-bottom: none; }
+.step-title { color: var(--aqua-light); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
+.step-detail { color: rgba(255,255,255,0.7); font-weight: 300; font-size: 0.95rem; }
+
+@media print {
+  .slide { min-height: auto; page-break-after: always; padding: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide slide-title">
+  <div class="label">For Review &bull; April 2026</div>
+  <h1>How Mareto Captures Your Theory of Change</h1>
+  <p class="subtitle">A mapping of AWH's work to the system you'll use every day</p>
+  <div style="margin-top: 48px; font-weight: 300; font-size: 0.95rem; opacity: 0.7;">
+    Prepared by HelpSeeker Technologies for A Way Home Canada
+  </div>
+</div>
+
+<!-- SLIDE 2: The Flow -->
+<div class="slide slide-content">
+  <div class="label">Your Theory of Change in Mareto</div>
+  <h2>From Activities to Impact</h2>
+  <p style="margin-bottom: 16px; font-weight: 300;">Everything AWH does flows through a chain: your people and resources power your activities, which produce outcomes, which lead to systems change. Here's how Mareto captures each stage.</p>
+
+  <div class="flow-container">
+    <div class="flow-tier t-impact">
+      <div class="flow-label">Impact</div>
+      <div class="flow-main">Prevention and reduction of youth homelessness leads to improved social and economic well-being of youth, families and communities</div>
+    </div>
+
+    <div class="flow-tier t-long" style="margin-top: 20px;">
+      <div class="flow-label">Long-term Outcomes</div>
+      <div class="flow-main">Systems transformation: making the shift to prevention-focused policies, programs, and practices</div>
+      <div class="flow-detail">Measured by: policy changes tracked, new prevention programs established, community-level practice shifts documented</div>
+      <div class="flow-where w-green">Tracked in: Outcomes</div>
+    </div>
+
+    <div class="flow-tier t-med" style="margin-top: 20px;">
+      <div class="flow-label">Medium-term Outcomes (Leverage)</div>
+      <div class="flow-main">Increased experimentation with or uptake of prevention-focused practices among funders, partners, and practitioners</div>
+      <div class="flow-detail">Measured by: # of organizations adopting new approaches, commitment curve survey results, case studies of practice change</div>
+      <div class="flow-where w-green">Tracked in: Outcomes linked to Cases</div>
+    </div>
+
+    <div class="flow-tier t-short" style="margin-top: 20px;">
+      <div class="flow-label">Short-term Outcomes (Influence)</div>
+      <div class="flow-main">Increased awareness and understanding of prevention-focused practices among funders, partners, and practitioners</div>
+      <div class="flow-detail">Measured by: commitment curve surveys, key informant interviews, satisfaction rates, member feedback</div>
+      <div class="flow-where w-green">Tracked in: Outcomes linked to Events</div>
+    </div>
+
+    <div class="flow-tier t-activity" style="margin-top: 20px;">
+      <div class="flow-label">Activities (What You Do Every Day)</div>
+      <div class="flow-main">Trainings, CoP calls, policy meetings, coaching, conferences, partner meetings, research dissemination</div>
+      <div class="flow-detail"># of trainings delivered, # of CoP calls, # of policy meetings, # of webinar attendees, # of publications</div>
+      <div class="flow-where" style="background: rgba(11,31,51,0.15);">Tracked in: Events</div>
+    </div>
+
+    <div class="flow-tier t-input" style="margin-top: 20px;">
+      <div class="flow-label">Inputs (Your Resources)</div>
+      <div class="flow-main">Staff, youth with lived experience, COH network, funders, government partners, Indigenous leaders, municipal governments</div>
+      <div class="flow-where w-blue">Tracked in: People &amp; Organizations</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: Outcome Types with Indicators -->
+<div class="slide slide-content-alt">
+  <div class="label">For Your Review</div>
+  <h2>Proposed Outcome Categories &amp; How to Measure Them</h2>
+  <p style="margin-bottom: 16px; font-weight: 300;">When your staff record a result from an event or case, they'll select from these categories. We've included proposed indicators so you can track progress over time.</p>
+
+  <div class="indicator-grid">
+    <!-- SHORT-TERM -->
+    <div class="indicator-card">
+      <div class="indicator-header ih-short">Short-term Outcomes (Influence)</div>
+      <div class="indicator-body">
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 4px;">Categories:</h3>
+        <ul style="padding-left: 16px;">
+          <li>Increased awareness of prevention-focused practices</li>
+          <li>Increased awareness of systems planning approach</li>
+          <li>Increased awareness of early intervention practices</li>
+          <li>Knowledge mobilization capacity built</li>
+          <li>Culture of continuous learning established</li>
+          <li>Youth engagement practices documented</li>
+        </ul>
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 12px;">How You Measure:</h3>
+        <ul style="padding-left: 16px;">
+          <li># of stakeholders reporting increased awareness (survey)</li>
+          <li>Commitment Curve Survey scores</li>
+          <li>Key informant interview findings</li>
+          <li>% satisfaction rate (target: 80%+)</li>
+          <li># of NLC members engaged</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MEDIUM-TERM -->
+    <div class="indicator-card">
+      <div class="indicator-header ih-med">Medium-term Outcomes (Leverage)</div>
+      <div class="indicator-body">
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 4px;">Categories:</h3>
+        <ul style="padding-left: 16px;">
+          <li>Increased uptake of prevention-focused policies</li>
+          <li>Increased uptake of systems planning approach</li>
+          <li>Increased uptake of early intervention practices</li>
+          <li>Greater sector capacity to address youth homelessness</li>
+          <li>Youth meaningfully engaged in decision making</li>
+          <li>Policy agenda informed by Learning Community</li>
+        </ul>
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 12px;">How You Measure:</h3>
+        <ul style="padding-left: 16px;">
+          <li># of organizations adopting new practices</li>
+          <li># of communities implementing systems planning</li>
+          <li># of policy recommendations acted upon</li>
+          <li>Commitment Curve Survey — uptake scores</li>
+          <li>Case studies of practice change</li>
+          <li># of Indigenous-led partnerships (target: 5+)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- LONG-TERM -->
+    <div class="indicator-card">
+      <div class="indicator-header ih-long">Long-term Outcomes (Impact)</div>
+      <div class="indicator-body">
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 4px;">Categories:</h3>
+        <ul style="padding-left: 16px;">
+          <li>Systems transformation to prevention-focused approach</li>
+          <li>Prevention and reduction of youth homelessness</li>
+          <li>Improved well-being of youth, families and communities</li>
+          <li>Reduction in length of time youth experience homelessness</li>
+        </ul>
+        <h3 style="font-size: 0.85rem; color: var(--teal-core); margin-top: 12px;">How You Measure:</h3>
+        <ul style="padding-left: 16px;">
+          <li># of policies changed (laws, regulations, funding structures)</li>
+          <li># of new prevention programs established</li>
+          <li># of communities with prevention-focused systems</li>
+          <li># of practices shifted from reactive to preventive</li>
+          <li>Average length of shelter stay (decrease)</li>
+          <li>Policy tracking — changes in government approach</li>
+          <li>Community-level case studies of transformation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: Activity Types -->
+<div class="slide slide-content">
+  <div class="label">For Your Review</div>
+  <h2>Your Activities in Mareto</h2>
+  <p style="margin-bottom: 16px; font-weight: 300;">Everything your team does gets logged as an event. Here's how we've organized the types based on your five activity streams. Staff just pick from this list.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 220px;">Category</th>
+        <th>Types</th>
+        <th style="width: 220px;">Your Activity Stream</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight: 700;">Conferences &amp; Presentations</td>
+        <td>Conference, Workshop, Symposium, Webinar, Panel Presentation</td>
+        <td>Innovation, Research &amp; Knowledge Mobilization</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Training &amp; Technical Assistance</td>
+        <td>Training Delivery, Coaching Session, Fidelity Review, Systems Planning Module</td>
+        <td>Planning</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Community of Practice</td>
+        <td>CoP Call, Learning Exchange, NLC Event, Reflective Practice Session</td>
+        <td>Practice</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Policy &amp; Government Relations</td>
+        <td>Meeting &mdash; Civil Servant, Meeting &mdash; Politician, Policy Prep, Government Engagement</td>
+        <td>Policy</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Governance &amp; Administration</td>
+        <td>Board Meeting, Board Retreat, AGM, Committee Meeting, Compliance, IRS Reporting</td>
+        <td>Operations</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Partnership &amp; Relationship Building</td>
+        <td>Partner Meeting, Funder Meeting, Learning Exchange (International), Quick Call, Coffee Meeting</td>
+        <td>Partnerships &amp; Coalition Building</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Research &amp; Knowledge Products</td>
+        <td>Research Dissemination, Publication Release, Report Release, Resource Development</td>
+        <td>Innovation, Research &amp; Knowledge Mobilization</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 16px; font-weight: 300; font-size: 0.9rem;"><strong>Note:</strong> Civil Servant vs Politician meetings are kept separate for Lobbying Act compliance tracking.</p>
+</div>
+
+<!-- SLIDE 5: What You'll See in Mareto -->
+<div class="slide slide-content-alt">
+  <div class="label">Your System</div>
+  <h2>What You'll See in Mareto</h2>
+  <p style="margin-bottom: 24px; font-weight: 300;">Five pages in the sidebar. Each one is simple. Here's what you can do in each:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 140px;">Page</th>
+        <th>What You Track</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight: 700;">People</td>
+        <td>Anyone AWH interacts with — first name, last name, email, phone, their function (Elder, Board Member, etc.), and which organization they belong to</td>
+        <td>Mark Aston, Covenant House Toronto, NLC Member</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Organizations</td>
+        <td>Any organization AWH works with — name, type (can select multiple: Government, Indigenous Led, etc.), Canadian or International designation</td>
+        <td>Covenant House Toronto — Service Provider, Child Welfare</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Events</td>
+        <td>Everything your team does — type, date, who was there, which organization, part of which case, part of which program, and the outcome achieved</td>
+        <td>HF4Y Training for Oklahoma Health Dept — Training Delivery, linked to Heidi, linked to TTA Program</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Cases</td>
+        <td>Ongoing engagements — type (Initiative, Research, etc.), status (Active, Closed), which program it belongs to, who's involved</td>
+        <td>Edmonton Systems Planning Engagement — Active, NLC Program, Capacity Building</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">Programs</td>
+        <td>Structured offerings AWH delivers — name, type, start/end dates, which organization funds it</td>
+        <td>National Learning Community — Core Program, funded by ESDC</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 24px; font-weight: 300;">When you log an event, you connect it to the people, organizations, cases, and programs involved. Mareto then uses these connections to show your impact — how many trainings led to how many outcomes across which programs.</p>
+</div>
+
+<!-- SLIDE 6: Next Steps -->
+<div class="slide slide-section">
+  <div class="label" style="color: var(--aqua-light);">Next Steps</div>
+  <h2 style="color: var(--white);">What We Need From You</h2>
+  <div style="max-width: 700px; margin-top: 32px;">
+    <div class="step-item">
+      <div class="step-title">1. Review the outcome categories (Slide 3)</div>
+      <div class="step-detail">Do these match how you think about your impact? Are any categories missing? Should we add or rename any?</div>
+    </div>
+    <div class="step-item">
+      <div class="step-title">2. Review the activity types (Slide 4)</div>
+      <div class="step-detail">Does this list cover everything your team does? Anything we should add, remove, or rename?</div>
+    </div>
+    <div class="step-item">
+      <div class="step-title">3. Review the indicators (Slide 3)</div>
+      <div class="step-detail">For each outcome level, we've proposed how to measure progress. Are these the right metrics? Do you have existing data collection tools we should connect?</div>
+    </div>
+    <div class="step-item">
+      <div class="step-title">4. Confirm the 5-page model (Slide 5)</div>
+      <div class="step-detail">People, Organizations, Events, Cases, Programs. Is this clear and complete?</div>
+    </div>
+    <div class="step-item">
+      <div class="step-title">5. Send any additional contact data</div>
+      <div class="step-detail">We will pre-load your contacts so you can see real people and organizations when you first log in.</div>
+    </div>
+  </div>
+  <div style="margin-top: 48px; padding: 24px; background: rgba(255,255,255,0.06); border-radius: 8px;">
+    <p style="color: var(--aqua-light); font-weight: 700; margin-bottom: 8px;">Our Timeline</p>
+    <p style="color: rgba(255,255,255,0.7); font-weight: 300;">Once we have your feedback on this document, we will finalize the system and have it ready for you to test before our next meeting on April 22.</p>
+  </div>
+</div>
+
+</body>
+</html>
