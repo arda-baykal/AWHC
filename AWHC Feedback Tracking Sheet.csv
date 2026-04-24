@@ -7,6 +7,7 @@ Row,Category,Feedback Type,Specific Request,Original Status,What We Did,Status,S
 6,GEOGRAPHY,Add Option,USA,Open,Added 'USA' to geography_type seed CSV,Done,geography_type.csv,Client noted may need narrower breakdown later
 7,GEOGRAPHY,Add Option,International,Open,Added 'International' to geography_type seed CSV,Done,geography_type.csv,Client noted consider breakdown by country/continent
 8,PERSON TYPE,Reword,AWHC Director - misleading,Open,Flagged in person_type seed CSV — row marked REWORD. Needs client to confirm new name.,Needs Client Input,person_type.csv,Suggest renaming to 'Executive Director' or 'Director - AWHC Staff'. Old name kept in source column.
+8,PERSON TYPE,Reword,AWHC Director - misleading,Open,Renamed to 'AWHC Staff Member' in seed CSV and live Corteza instance,Done,person_type.csv,Renamed from 'AWHC Director' to 'AWHC Staff Member' to avoid confusion with Board Member
 9,PERSON TYPE,Add Option,Board Member,Open,Added 'Board Member' to person_type seed CSV,Done,person_type.csv,
 10,PERSON TYPE,Add Option,Volunteer,Open,Added 'Volunteer' to person_type seed CSV,Done,person_type.csv,
 11,PERSON TYPE,Add Option,Elected Official,Open,Added 'Elected Official' to person_type seed CSV,Done,person_type.csv,
@@ -50,6 +51,13 @@ Row,Category,Feedback Type,Specific Request,Original Status,What We Did,Status,S
 49,DASHBOARD,Enhancement,Track satisfaction rates,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
 50,DASHBOARD,Enhancement,Track organizational retention rate,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
 51,DASHBOARD,Enhancement,Track grant-specific deliverables,Open,Not actioned — dashboard development item,Skipped (Dashboard/Process),,
+45,DASHBOARD,Enhancement,Track fee-for-service contracts,Open,Implemented in awhc-dashboard.jsx as Fee-for-Service Contracts metric card,Done,awhc-dashboard.jsx,
+46,DASHBOARD,Enhancement,Track trainings count/type/attendees,Open,Implemented in awhc-dashboard.jsx as Trainings metric card,Done,awhc-dashboard.jsx,
+47,DASHBOARD,Enhancement,Track fidelity reviews,Open,Implemented in awhc-dashboard.jsx as Fidelity Reviews metric card,Done,awhc-dashboard.jsx,
+48,DASHBOARD,Enhancement,Track Community of Practice sessions,Open,Implemented in awhc-dashboard.jsx as Community of Practice metric card,Done,awhc-dashboard.jsx,
+49,DASHBOARD,Enhancement,Track satisfaction rates,Open,Implemented in awhc-dashboard.jsx as Satisfaction Rates metric card,Done,awhc-dashboard.jsx,
+50,DASHBOARD,Enhancement,Track organizational retention rate,Open,Implemented in awhc-dashboard.jsx as Org Retention Rate metric card,Done,awhc-dashboard.jsx,
+51,DASHBOARD,Enhancement,Track grant-specific deliverables,Open,Implemented in awhc-dashboard.jsx with ESDC grant tracking section,Done,awhc-dashboard.jsx,Metrics tied to specific grant requirements
 52,ACTIVITY TYPE,Add Option,Training,Open,Added 'Training' to activity_type seed CSV,Done,activity_type.csv,
 53,ACTIVITY TYPE,Add Option,Community of Practice,Open,Added 'Community of Practice' to activity_type seed CSV,Done,activity_type.csv,
 54,ACTIVITY TYPE,Add Option,Organizational Policy Review,Open,Added 'Organizational Policy Review' to activity_type seed CSV,Done,activity_type.csv,
@@ -63,6 +71,12 @@ Row,Category,Feedback Type,Specific Request,Original Status,What We Did,Status,S
 62,ORGANIZATION TYPE,Clarification,Will Org Type be check-all-that-apply?,Open,Yes — set isMulti:true on organization-organization_type field in updated YAML,Done,N/A (YAML schema change),Organizations can now have multiple types
 63,ORGANIZATION TYPE,Add Option,Community Entities,Open,Added to organization_type seed CSV,Done,organization_type.csv,
 64,ORGANIZATION TYPE,Clarification,Org types under Service Provider — clarify hierarchy,Open,Not actioned — but parent field already supports hierarchy,Skipped (Already Supported),,Aluko can set Service Provider as parent for applicable sub-types
+59,CASE TYPE,Clarification,Are case types sub-options of others?,Open,Parent field (case_type-parent) exists on case_type module. Current 6 types kept flat — hierarchy available when needed. parent_name column added to seed CSV.,Done,case_type.csv,KGL T04/T06 compliant. No sub-groupings identified in current types but schema supports it.
+60,CASE TYPE,Reword,Shift YHDP to Demonstration Project Support,Open,Renamed in case_type seed CSV. Source column shows old name.,Done,case_type.csv,Was 'Shift YHDP' — now 'Demonstration Project Support'
+61,CASE TYPE,Add Option,Research and/or Research Support,Open,Added to case_type seed CSV,Done,case_type.csv,
+62,ORGANIZATION TYPE,Clarification,Will Org Type be check-all-that-apply?,Open,Yes — isMulti:true set on organization-organization_type field in YAML and now applied to live Corteza instance,Done,N/A (YAML + live Corteza),KGL M03 compliant. Organizations can now have multiple types. Live instance updated.
+63,ORGANIZATION TYPE,Add Option,Community Entities,Open,Added to organization_type seed CSV,Done,organization_type.csv,
+64,ORGANIZATION TYPE,Clarification,Org types under Service Provider — clarify hierarchy,Open,"Added Service Provider (OT-SERPRO) as parent. Set Child Welfare, Justice, Indigenous Led, LGBTQIA+ as children via organization_type-parent field in seed CSV and live Corteza.",Done,organization_type.csv,KGL T02/T06 compliant. 4 children nested under Service Provider parent.
 65,ORGANIZATION TYPE,Add Option,Child Welfare,Open,Added to organization_type seed CSV,Done,organization_type.csv,
 66,ORGANIZATION TYPE,Add Option,Justice,Open,Added to organization_type seed CSV,Done,organization_type.csv,
 67,ORGANIZATION TYPE,Add Option,Indigenous Led,Open,Added to organization_type seed CSV,Done,organization_type.csv,
